@@ -14,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MemberService {
     private final MemberRepository memberRepository;
+
     /**
      * 회원가입
      */
@@ -36,10 +37,12 @@ public class MemberService {
      * 전체 회원 조회
      */
     public List<Member> findMembers() {
+
         return memberRepository.findAll();
     }
 
     public Member findOne(Long memberId) {
+
         return memberRepository.findOne(memberId);
     }
 }
